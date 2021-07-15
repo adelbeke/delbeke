@@ -1,7 +1,12 @@
 <template>
-    <div class="absolute top-0 right-0 p-4 flex flex-row items-center">
-      <label class="text-xs dark:text-secondary text-primary mr-2 hidden lg:block">{{ $t('toggle-theme') }}</label>
+    <div class="absolute top-0 right-0 p-4 flex flex-row items-center cursor-pointer">
+      <label
+          for="toggle-theme"
+          class="text-xs dark:text-secondary text-primary mr-2 hidden lg:block cursor-pointer">
+        {{ $t('toggle-theme') }}
+      </label>
       <button
+          id="toggle-theme"
           class="flex-row"
           v-on:click="toggleStorageTheme"
       >

@@ -1,18 +1,18 @@
 <template>
   <main class="dark">
-    <div class="flex-col justify-center flex dark:bg-primary bg-light items-center h-screen">
-      <toggle-theme />
-    </div>
+      <container>
+        <p class="dark:text-secondary text-primary text-xl font-bold">Hello 👋🏻</p>
+      </container>
   </main>
 </template>
 
 <script>
-import ToggleTheme from './components/ToggleTheme'
+import Container from './components/Container'
 
 export default {
   name: 'App',
   components: {
-    ToggleTheme,
+    Container,
   }
 }
 </script>
