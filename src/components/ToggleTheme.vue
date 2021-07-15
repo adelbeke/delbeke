@@ -1,9 +1,16 @@
 <template>
-  <div class="absolute top-0 right-0 p-4">
-    <button v-on:click="toggleStorageTheme">
-      <img :src="icon" alt="" />
-    </button>
-  </div>
+  <main class="dark">
+    <div class="absolute top-0 right-0 p-4 flex flex-row items-center">
+      <label class="text-xs dark:text-secondary text-primary mr-2 hidden lg:block">{{ $t('toggle-theme') }}</label>
+      <button
+          class="flex-row"
+          v-on:click="toggleStorageTheme"
+      >
+        <img :src="icon" alt=""/>
+      </button>
+    </div>
+  </main>
+
 </template>
 
 <script>
@@ -12,9 +19,9 @@ import {AvailableTheme} from "@/config";
 export default {
   name: 'ToggleTheme',
   data() {
-      return {
-        icon: require('@/assets/svg/sun.svg')
-      }
+    return {
+      icon: require('@/assets/svg/sun.svg')
+    }
   },
   methods: {
     toggleStorageTheme() {
@@ -26,7 +33,7 @@ export default {
       return this.toggleMainClass()
     },
     toggleMainClass() {
-      const main = document.getElementsByTagName('html')[0]
+      const main = document.getElementsByTagName('main')[0]
       const theme = localStorage.theme
 
       switch (theme) {
@@ -47,3 +54,11 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "toggle-theme": "You can change the theme"
+  }
+}
+</i18n>
