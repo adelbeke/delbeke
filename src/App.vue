@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ToggleTheme from './component/ToggleTheme'
+import ToggleTheme from './components/ToggleTheme'
 
 export default {
   name: 'App',
