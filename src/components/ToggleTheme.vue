@@ -1,5 +1,4 @@
 <template>
-  <main class="dark">
     <div class="absolute top-0 right-0 p-4 flex flex-row items-center">
       <label class="text-xs dark:text-secondary text-primary mr-2 hidden lg:block">{{ $t('toggle-theme') }}</label>
       <button
@@ -9,8 +8,6 @@
         <img :src="icon" alt=""/>
       </button>
     </div>
-  </main>
-
 </template>
 
 <script>
@@ -20,7 +17,7 @@ export default {
   name: 'ToggleTheme',
   data() {
     return {
-      icon: require('@/assets/svg/sun.svg')
+      icon: require('@/assets/svg/moon.svg')
     }
   },
   methods: {
@@ -40,17 +37,21 @@ export default {
         case AvailableTheme.dark:
         default:
           main.classList.add('dark')
-          this.icon = require('@/assets/svg/sun.svg')
+          this.icon = require('@/assets/svg/moon.svg')
           break
         case AvailableTheme.light:
           main.classList.remove('dark')
-          this.icon = require('@/assets/svg/moon.svg')
+          this.icon = require('@/assets/svg/sun.svg')
           break
       }
     }
   },
   mounted() {
-    this.toggleMainClass()
+    const main = document.getElementsByTagName('main')[0]
+    if (!main.classList.contains('dark')) {
+      main.classList.add('dark')
+      this.icon = require('@/assets/svg/moon.svg')
+    }
   }
 }
 </script>

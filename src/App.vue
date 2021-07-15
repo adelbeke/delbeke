@@ -1,8 +1,9 @@
 <template>
-    <div class="flex-col justify-center flex bg-primary dark:bg-light items-center h-screen">
+  <main class="dark">
+    <div class="flex-col justify-center flex dark:bg-primary bg-light items-center h-screen">
       <toggle-theme />
-      <hello-i18n />
     </div>
+  </main>
 </template>
 
 <script>
@@ -16,3 +17,8 @@ export default {
 }
 </script>
 
+<style>
+  main {
+    font-family: 'Karla', serif;
+  }
+</style>

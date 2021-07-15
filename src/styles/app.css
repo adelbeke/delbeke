@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'Karla';
+    src: url("../fonts/Karla-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Karla SemiBold';
+    src: url("../fonts/Karla-SemiBold.ttf") format("truetype");
+}
