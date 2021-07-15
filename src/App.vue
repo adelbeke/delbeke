@@ -1,18 +1,25 @@
 <template>
   <main class="dark">
       <container>
-        <p class="dark:text-secondary text-primary text-xl font-bold">Hello 👋🏻</p>
+        <div class="flex flex-col md:flex-row">
+          <illustration />
+          <who-am-i />
+        </div>
       </container>
   </main>
 </template>
 
 <script>
 import Container from './components/Container'
+import Illustration from "@/components/Illustration";
+import WhoAmI from "@/components/WhoAmI";
 
 export default {
   name: 'App',
   components: {
     Container,
+    Illustration,
+    WhoAmI,
   }
 }
 </script>
