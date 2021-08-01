@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: '/delbeke/',
   pluginOptions: {
     i18n: {
       locale: 'en',
