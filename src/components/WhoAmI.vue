@@ -1,11 +1,19 @@
 <template>
-  <div class="w-full md:w-6/12">
-    <h1 :class="textClass">{{ $t('hello') }}</h1>
-    <p :class="textClass">{{ $t('study') }}</p>
-    <p :class="textClass">{{ $t('what-i-like') }}</p>
-    <p :class="textClass">{{ $t('not-coding') }}</p>
-    <p :class="textClass">{{ $t('current') }}</p>
-    <p :class="textClass">{{ $t('connect') }}</p>
+  <div class="w-full md:w-6/12 px-4 flex flex-col justify-start lg:justify-center">
+    <h1
+        :class="textClass"
+        class="text-5xl mb-3 mt-4"
+    >
+      {{ $t('hello') }}
+    </h1>
+    <p
+        v-for="c in content"
+        :key="c"
+        :class="textClass"
+        class="text-xs lg:text-base"
+    >
+      {{ c }}
+    </p>
   </div>
 </template>
 
@@ -14,7 +22,14 @@ export default {
   name: 'WhoAmI',
   data() {
     return {
-      textClass: 'text-primary dark:text-secondary'
+      textClass: 'text-primary dark:text-secondary mb-2 lg:mb-4',
+      content: [
+        this.$t('study'),
+        this.$t('what-i-like'),
+        this.$t('not-coding'),
+        this.$t('current'),
+        this.$t('connect'),
+      ]
     }
   }
 }
