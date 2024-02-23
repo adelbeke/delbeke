@@ -9,6 +9,7 @@ const AWARDS = ['ces']
 const EXPERIENCES = ['smartness', 'lgm', 'happy_dev']
 const PROJECTS = ['moodm8', 'shaaare', 'ko', 'livecoworking']
 const LINKS = {
+    shaaare: 'https://shaaa.re/',
     moodm8: 'https://moodm8.com/',
     happy_dev: 'https://happy-dev.fr/en/',
     lgm: 'https://www.lgm.fr/',
